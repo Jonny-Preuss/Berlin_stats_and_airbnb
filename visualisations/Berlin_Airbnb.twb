@@ -1,0 +1,1082 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook original-version='18.1' source-build='2021.1.1 (20211.21.0420.1112)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Bezirke_Berlin+ (Berlin_Bezirke_Statista)' inline='true' name='federated.0cbij7v0ay6bow12kfkyj1xytshg' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Berlin_Bezirke_Statista' name='excel-direct.03nh25u15xbmji15bwn280pjpbcy'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jonnypreuss/Documents/01_Uni/01_Paris/01_Courses/Y2T3/01_Business Intelligence/Project/data/Statista/Berlin_Bezirke_Statista.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anteil_Inland_Ausland_2020' table='[Anteil_Inland_Ausland_2020$]' type='table'>
+          <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+            <column datatype='string' name='Bezirk' ordinal='0' />
+            <column datatype='real' name='Ausländische Gäste' ordinal='1' />
+            <column datatype='real' name='Insgesamt' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Bezirke_Berlin' table='[Bezirke_Berlin$]' type='table'>
+            <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='6'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='string' name='East_West' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anteil_Inland_Ausland_2020' table='[Anteil_Inland_Ausland_2020$]' type='table'>
+            <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='real' name='Ausländische Gäste' ordinal='1' />
+              <column datatype='real' name='Insgesamt' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anteil_Kettenhotels_2018' table='[Anteil_Kettenhotels_2018$]' type='table'>
+            <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='integer' name='Anteil' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anzahl_Airbnb_2018' table='[Anzahl_Airbnb_2018$]' type='table'>
+            <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='integer' name='Anzahl' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Kaufpreise_Whg' table='[Kaufpreise_Whg$]' type='table'>
+            <columns gridOrigin='A1:K13:no:A1:K13:0' header='yes' outcome='6'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='integer' name='Q1 2011' ordinal='1' />
+              <column datatype='integer' name='Q3 2012' ordinal='2' />
+              <column datatype='integer' name='Q1 2013' ordinal='3' />
+              <column datatype='integer' name='Q1 2014' ordinal='4' />
+              <column datatype='integer' name='Q3 2014' ordinal='5' />
+              <column datatype='integer' name='Q3 2015' ordinal='6' />
+              <column datatype='integer' name='Q3 2016' ordinal='7' />
+              <column datatype='integer' name='Q1 2017' ordinal='8' />
+              <column datatype='integer' name='Q1 2018' ordinal='9' />
+              <column datatype='integer' name='Q1 2019' ordinal='10' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Neumieten_2019' table='[Neumieten_2019$]' type='table'>
+            <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='real' name='mietpreis_qm_2019' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Störung_Touris_2012' table='[Störung_Touris_2012$]' type='table'>
+            <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+              <column datatype='string' name='Bezirk' ordinal='0' />
+              <column datatype='integer' name='Gestört' ordinal='1' />
+              <column datatype='integer' name='Nicht gestört' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Anteil]' value='[Anteil_Kettenhotels_2018].[Anteil]' />
+          <map key='[Anzahl]' value='[Anzahl_Airbnb_2018].[Anzahl]' />
+          <map key='[Ausländische Gäste]' value='[Anteil_Inland_Ausland_2020].[Ausländische Gäste]' />
+          <map key='[Bezirk (Anteil!Inland!Ausland!2020)]' value='[Anteil_Inland_Ausland_2020].[Bezirk]' />
+          <map key='[Bezirk (Anteil!Kettenhotels!2018)]' value='[Anteil_Kettenhotels_2018].[Bezirk]' />
+          <map key='[Bezirk (Anzahl!Airbnb!2018)]' value='[Anzahl_Airbnb_2018].[Bezirk]' />
+          <map key='[Bezirk (Kaufpreise!Whg)]' value='[Kaufpreise_Whg].[Bezirk]' />
+          <map key='[Bezirk (Neumieten!2019)]' value='[Neumieten_2019].[Bezirk]' />
+          <map key='[Bezirk (Störung!Touris!2012)]' value='[Störung_Touris_2012].[Bezirk]' />
+          <map key='[Bezirk]' value='[Bezirke_Berlin].[Bezirk]' />
+          <map key='[East_West]' value='[Bezirke_Berlin].[East_West]' />
+          <map key='[Gestört]' value='[Störung_Touris_2012].[Gestört]' />
+          <map key='[Insgesamt]' value='[Anteil_Inland_Ausland_2020].[Insgesamt]' />
+          <map key='[Nicht gestört]' value='[Störung_Touris_2012].[Nicht gestört]' />
+          <map key='[Q1 2011]' value='[Kaufpreise_Whg].[Q1 2011]' />
+          <map key='[Q1 2013]' value='[Kaufpreise_Whg].[Q1 2013]' />
+          <map key='[Q1 2014]' value='[Kaufpreise_Whg].[Q1 2014]' />
+          <map key='[Q1 2017]' value='[Kaufpreise_Whg].[Q1 2017]' />
+          <map key='[Q1 2018]' value='[Kaufpreise_Whg].[Q1 2018]' />
+          <map key='[Q1 2019]' value='[Kaufpreise_Whg].[Q1 2019]' />
+          <map key='[Q3 2012]' value='[Kaufpreise_Whg].[Q3 2012]' />
+          <map key='[Q3 2014]' value='[Kaufpreise_Whg].[Q3 2014]' />
+          <map key='[Q3 2015]' value='[Kaufpreise_Whg].[Q3 2015]' />
+          <map key='[Q3 2016]' value='[Kaufpreise_Whg].[Q3 2016]' />
+          <map key='[mietpreis_qm_2019]' value='[Neumieten_2019].[mietpreis_qm_2019]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Bezirke_Berlin]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B13:no:A1:B13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Anteil_Inland_Ausland_2020]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C13:no:A1:C13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Anteil_Kettenhotels_2018]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B13:no:A1:B13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Anzahl_Airbnb_2018]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B13:no:A1:B13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K13:no:A1:K13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Neumieten_2019]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B13:no:A1:B13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Störung_Touris_2012]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C13:no:A1:C13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk]</local-name>
+            <parent-name>[Bezirke_Berlin]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>East_West</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[East_West]</local-name>
+            <parent-name>[Bezirke_Berlin]</parent-name>
+            <remote-alias>East_West</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Anteil!Inland!Ausland!2020)]</local-name>
+            <parent-name>[Anteil_Inland_Ausland_2020]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ausländische Gäste</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Ausländische Gäste]</local-name>
+            <parent-name>[Anteil_Inland_Ausland_2020]</parent-name>
+            <remote-alias>Ausländische Gäste</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Insgesamt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Insgesamt]</local-name>
+            <parent-name>[Anteil_Inland_Ausland_2020]</parent-name>
+            <remote-alias>Insgesamt</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Anteil!Kettenhotels!2018)]</local-name>
+            <parent-name>[Anteil_Kettenhotels_2018]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anteil!Kettenhotels!2018_4F39C8F9BAE949DC94944ED3CFCE0390]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Anteil</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anteil]</local-name>
+            <parent-name>[Anteil_Kettenhotels_2018]</parent-name>
+            <remote-alias>Anteil</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anteil!Kettenhotels!2018_4F39C8F9BAE949DC94944ED3CFCE0390]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Anzahl!Airbnb!2018)]</local-name>
+            <parent-name>[Anzahl_Airbnb_2018]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anzahl!Airbnb!2018_CED7D1DD004240E7A83B0D104C8E8382]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Anzahl</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anzahl]</local-name>
+            <parent-name>[Anzahl_Airbnb_2018]</parent-name>
+            <remote-alias>Anzahl</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Anzahl!Airbnb!2018_CED7D1DD004240E7A83B0D104C8E8382]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Kaufpreise!Whg)]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2011</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2011]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2011</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q3 2012</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q3 2012]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q3 2012</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2013</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2013]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2013</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2014</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2014]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2014</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q3 2014</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q3 2014]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q3 2014</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q3 2015</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q3 2015]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q3 2015</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q3 2016</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q3 2016]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q3 2016</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2017</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2017]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2017</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2018</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2018]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2018</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Q1 2019</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Q1 2019]</local-name>
+            <parent-name>[Kaufpreise_Whg]</parent-name>
+            <remote-alias>Q1 2019</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Neumieten!2019)]</local-name>
+            <parent-name>[Neumieten_2019]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Neumieten!2019_E92C74CDF2B94B4BB70907BCFD9981E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mietpreis_qm_2019</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mietpreis_qm_2019]</local-name>
+            <parent-name>[Neumieten_2019]</parent-name>
+            <remote-alias>mietpreis_qm_2019</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Neumieten!2019_E92C74CDF2B94B4BB70907BCFD9981E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bezirk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bezirk (Störung!Touris!2012)]</local-name>
+            <parent-name>[Störung_Touris_2012]</parent-name>
+            <remote-alias>Bezirk</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gestört</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gestört]</local-name>
+            <parent-name>[Störung_Touris_2012]</parent-name>
+            <remote-alias>Gestört</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nicht gestört</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Nicht gestört]</local-name>
+            <parent-name>[Störung_Touris_2012]</parent-name>
+            <remote-alias>Nicht gestört</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' hidden='true' name='[Bezirk (Anteil!Inland!Ausland!2020)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Bezirk (Anteil!Kettenhotels!2018)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Bezirk (Anzahl!Airbnb!2018)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Bezirk (Kaufpreise!Whg)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Bezirk (Neumieten!2019)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Bezirk (Störung!Touris!2012)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Bezirk]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='East West' datatype='string' name='[East_West]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='integer' name='[Gestört]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Anteil_Inland_Ausland_2020' datatype='table' name='[__tableau_internal_object_id__].[Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Anteil_Kettenhotels_2018' datatype='table' name='[__tableau_internal_object_id__].[Anteil!Kettenhotels!2018_4F39C8F9BAE949DC94944ED3CFCE0390]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Anzahl_Airbnb_2018' datatype='table' name='[__tableau_internal_object_id__].[Anzahl!Airbnb!2018_CED7D1DD004240E7A83B0D104C8E8382]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Bezirke_Berlin' datatype='table' name='[__tableau_internal_object_id__].[Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Kaufpreise_Whg' datatype='table' name='[__tableau_internal_object_id__].[Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Neumieten_2019' datatype='table' name='[__tableau_internal_object_id__].[Neumieten!2019_E92C74CDF2B94B4BB70907BCFD9981E2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Störung_Touris_2012' datatype='table' name='[__tableau_internal_object_id__].[Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Mietpreis Qm 2019' datatype='real' name='[mietpreis_qm_2019]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Anteil_Inland_Ausland_2020' id='Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anteil_Inland_Ausland_2020' table='[Anteil_Inland_Ausland_2020$]' type='table'>
+                <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='real' name='Ausländische Gäste' ordinal='1' />
+                  <column datatype='real' name='Insgesamt' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Anteil_Kettenhotels_2018' id='Anteil!Kettenhotels!2018_4F39C8F9BAE949DC94944ED3CFCE0390'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anteil_Kettenhotels_2018' table='[Anteil_Kettenhotels_2018$]' type='table'>
+                <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='integer' name='Anteil' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Anzahl_Airbnb_2018' id='Anzahl!Airbnb!2018_CED7D1DD004240E7A83B0D104C8E8382'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Anzahl_Airbnb_2018' table='[Anzahl_Airbnb_2018$]' type='table'>
+                <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='integer' name='Anzahl' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Bezirke_Berlin' id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Bezirke_Berlin' table='[Bezirke_Berlin$]' type='table'>
+                <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='string' name='East_West' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Kaufpreise_Whg' id='Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Kaufpreise_Whg' table='[Kaufpreise_Whg$]' type='table'>
+                <columns gridOrigin='A1:K13:no:A1:K13:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='integer' name='Q1 2011' ordinal='1' />
+                  <column datatype='integer' name='Q3 2012' ordinal='2' />
+                  <column datatype='integer' name='Q1 2013' ordinal='3' />
+                  <column datatype='integer' name='Q1 2014' ordinal='4' />
+                  <column datatype='integer' name='Q3 2014' ordinal='5' />
+                  <column datatype='integer' name='Q3 2015' ordinal='6' />
+                  <column datatype='integer' name='Q3 2016' ordinal='7' />
+                  <column datatype='integer' name='Q1 2017' ordinal='8' />
+                  <column datatype='integer' name='Q1 2018' ordinal='9' />
+                  <column datatype='integer' name='Q1 2019' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Neumieten_2019' id='Neumieten!2019_E92C74CDF2B94B4BB70907BCFD9981E2'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Neumieten_2019' table='[Neumieten_2019$]' type='table'>
+                <columns gridOrigin='A1:B13:no:A1:B13:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='real' name='mietpreis_qm_2019' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Störung_Touris_2012' id='Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C'>
+            <properties context=''>
+              <relation connection='excel-direct.03nh25u15xbmji15bwn280pjpbcy' name='Störung_Touris_2012' table='[Störung_Touris_2012$]' type='table'>
+                <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Bezirk' ordinal='0' />
+                  <column datatype='integer' name='Gestört' ordinal='1' />
+                  <column datatype='integer' name='Nicht gestört' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk]' />
+              <expression op='[Bezirk (Anteil!Inland!Ausland!2020)]' />
+            </expression>
+            <first-end-point object-id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445' unique-key='true' />
+            <second-end-point object-id='Anteil!Inland!Ausland!2020_4E3C8A6A96A048008EC7030BB3E4BC5E' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk]' />
+              <expression op='[Bezirk (Anteil!Kettenhotels!2018)]' />
+            </expression>
+            <first-end-point object-id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445' unique-key='true' />
+            <second-end-point object-id='Anteil!Kettenhotels!2018_4F39C8F9BAE949DC94944ED3CFCE0390' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk]' />
+              <expression op='[Bezirk (Anzahl!Airbnb!2018)]' />
+            </expression>
+            <first-end-point object-id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445' unique-key='true' />
+            <second-end-point object-id='Anzahl!Airbnb!2018_CED7D1DD004240E7A83B0D104C8E8382' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk]' />
+              <expression op='[Bezirk (Kaufpreise!Whg)]' />
+            </expression>
+            <first-end-point object-id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445' unique-key='true' />
+            <second-end-point object-id='Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk (Kaufpreise!Whg)]' />
+              <expression op='[Bezirk (Neumieten!2019)]' />
+            </expression>
+            <first-end-point object-id='Kaufpreise!Whg_FBCAD671797349FDAFE4C806A13294AD' unique-key='true' />
+            <second-end-point object-id='Neumieten!2019_E92C74CDF2B94B4BB70907BCFD9981E2' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Bezirk]' />
+              <expression op='[Bezirk (Störung!Touris!2012)]' />
+            </expression>
+            <first-end-point object-id='Bezirke!Berlin_B20A409E5D9A4CEE94E27F59BF6A0445' unique-key='true' />
+            <second-end-point object-id='Störung!Touris!2012_C7ADB620791448FEB38352E2286A7E2C' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bezirke_Berlin+ (Berlin_Bezirke_Statista)' name='federated.0cbij7v0ay6bow12kfkyj1xytshg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cbij7v0ay6bow12kfkyj1xytshg'>
+            <column caption='East West' datatype='string' name='[East_West]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='integer' name='[Gestört]' role='measure' type='quantitative' />
+            <column-instance column='[Gestört]' derivation='Avg' name='[avg:Gestört:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[East_West]' derivation='None' name='[none:East_West:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]' />
+              <text column='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:East_West:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B008899E-CEE0-4F0C-948C-20BE24CC4436}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bezirke_Berlin+ (Berlin_Bezirke_Statista)' name='federated.0cbij7v0ay6bow12kfkyj1xytshg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cbij7v0ay6bow12kfkyj1xytshg'>
+            <column datatype='string' name='[Bezirk]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='East West' datatype='string' name='[East_West]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='integer' name='[Gestört]' role='measure' type='quantitative' />
+            <column-instance column='[Gestört]' derivation='Avg' name='[avg:Gestört:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mietpreis_qm_2019]' derivation='Avg' name='[avg:mietpreis_qm_2019:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='Mietpreis Qm 2019' datatype='real' name='[mietpreis_qm_2019]' role='measure' type='quantitative' />
+            <column-instance column='[Bezirk]' derivation='None' name='[none:Bezirk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[East_West]' derivation='None' name='[none:East_West:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:East_West:nk]' />
+              <lod column='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:Bezirk:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]</rows>
+        <cols>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:mietpreis_qm_2019:qk]</cols>
+      </table>
+      <simple-id uuid='{F86D4ECA-5E98-4538-84AE-D6CF9130E856}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[avg:Gestört:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{56C4F473-6344-46B0-AA10-C0645B83DF8B}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:East_West:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:Bezirk:nk]</field>
+            <field>[federated.0cbij7v0ay6bow12kfkyj1xytshg].[none:East_West:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2F630608-FE32-4283-ABEA-C0B8A7CD6894}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='64' name='Sheet 1' width='144'>
+      iVBORw0KGgoAAAANSUhEUgAAAJAAAABACAYAAAD1eP6XAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAANO0lEQVR4nO2ce1BUV56Av4amgebdKA9tUFEREND1BRgfUSNBnCWibmKTWVEYRRNZN4mT
+      rIOJyeo6cYxVERcSJxRW1MS3ZhIf+ExE42gGR5FnRKXRgKQbFBB5d/f+QbyTHnEzxY1OSc5X
+      RRXnnN89/avmq3Pvufd3UVgsFgsCQTex+WcnIHiyEQIJZCEEEshCCCSQhRBIIAshkEAWQiCB
+      LIRAAlkIgQSyEAIJZCEEEshCCCSQhRBIIAshkEAWQiCBLIRAAlkIgQSyEAIJZCEEEshCCCSQ
+      hRBIIAshkEAWQiCBLIRAAlkIgQSyEAIJZCEEEshC+VMBeXl5jyMPwROKQvxzhUdLWMKaf3YK
+      jxRxChPIQggkkIUQSCALIdAThNLWBpWd7UPH7VVKlLYP/5Pa2Cjo29sdB3u7B8ZUdrZovdxx
+      clB1PbedkoF9e+Hq5GCd0z+Ye5fExMRQW1tr1ZeamsrcuXO7Nd++ffvw8PBg0qRJctLqcdjY
+      KIgbH8bLsyeQ/cU5th99cGc8IsiPj5YnkP3Fn8nYk2s15u7syLJfTyFiaH8qjXUM0vZm0/6v
+      2Xr4GwASnh3F3NgxXPuuhn4+Gs4V6fmfzTnc3179+7QxJDw7itKK7+nvo2HzgXN8froAkCmQ
+      xWJBp9MxZcoUqc/X17fb850+fRpfX18h0N+x4dXZVBrqOPGXb7sct1PasjwxWhLi7xkR5Mel
+      K9/x5qYDWCzg4aLmi/Up7P8qH0d7OxJjI5i1PIvGplZsFAo+eGMO44cPIvfiVSJDBzBldCDx
+      b3xES2s7AI4/WsFkCQSg1WoZNmzYA/0bN27kzJkz3Llzh5EjR5KSkkL//v0ByM7O5uDBg7S1
+      tTFkyBBef/11PvjgA/Lz8yksLKS0tJSAgABWrFghN70ewbIN+2lt72BubESX48lxUZzMu0KV
+      sR6tl/sD4yfzrli177W00tTSjsViwWS20NbRQVNLGwBmi4W7TS2YzWYAXowZRfquU5I8AM0/
+      +l22QLdu3aKwsFBq+/n54ebmRllZGfHx8Tg4OLBt2zaysrJYvXo1+fn5ZGZmsnjxYvz8/Dh7
+      9iwGg4HIyEgKCgrw8PBg8uTJ9OrVS25qPYbW9o6HjvXz1TB1TBC6NzczLWroT86ldlCxdslz
+      fHnhCvda2rjX0saRcyVkLHueE3nfEjqwD3ZKW/5cqAdA6+WOm5MDy16cgqebE38prmD/qXzp
+      9CZboK1bt7J161apvWbNGqKjo0lPTwfAYDBgNBrZvn07AA0NDdja2hISEkJERATR0dEAhIaG
+      kpOTg6+vLzqdTm5avxjeSp7Gu1uO0dZu+snY/r6ebHh1FmcLylm37bjUX3bTyKSRgQwN8CWo
+      nzdfXriCydS5AnlrXPjVuDByL17l8tVK5v8qir5e7mzcdQr4GQRaunQpM2fOlNr29vYAvPfe
+      e5w8eZL29nZsbGxobW0FICIigqioKFJTU3F1dSU2NpbU1FTpOME/zoyJ4TiolLS2tRM+qA9+
+      3h74eLoQPMCHkvJqq1itlzt/XK5jw86vOPj1384Y/Xw0LJzxFC+u/Fg6Ta1fOpPoiCCOni/F
+      eKeR32V+Lq2CF0pvsn3VfEkg2dt4e3t7nJycpB+lUklubi67du1i7dq1HDt2jLS0NClepVLx
+      /vvvc+jQIRYtWsSBAwfYs2ePNN7R8fDlWmCNm7Mj1bUNJE6PIHF6BOOGBRA6sA/PTxlhFaey
+      s+XDN+awbttxK3kAhg3uS17JDatrnK/+eoXhgVoAqoz1DB34t41Rbf09bG0UUlv2ClRRUcHF
+      ixeltlarxWQyYWdnh5eXF9XV1eTk5Ejj586do7a2lsmTJxMTE8OOHTtobGwEIDAwkMOHD6PX
+      63FxccHT01Nuej2ajw+et2o/NyEcrZc7GXty8fJwxkXtwLXKGoYN1vLtDQPHvil9YI7yqlqS
+      4qJwtLejubUdG4WCp0cE8k2RHoA/nS5g4YynWLJuFx0mM2NC+qGvvi0dL0sghULBzp072blz
+      p9SXmpqKTqfD39+f6dOno1arGTFiBApFp7UqlYqMjAzefvttoPOiOy4uDui8r3TixAlmz55N
+      eHg42dnZctLrEfRydyLjty8A4OnmhEKhYMbEcC6U3uAPW48/9LhpY4cSFTaARe/uYHSwP5Gh
+      /flifYpVzJJ1uym4VsWBM4X8aV0KZTcN9PPVkF9WyZ4vLwFw9HwJo4L92bd2AfpbtxnQR8Nr
+      G/ZLczzSp/FVVVV4e3tja2t999RsNmM0GjGZTPj4+GBjY30mNRgMuLi44Ojo+KhSe2w8KU/j
+      7ZS29OnlhrGuUdrS/xg3Z0d6uzujv1VLxw8X2CDKOR45T4pA3UU8CxPIQggkkIUQSCALcQ30
+      iDlR2fUD0J6CWIEEshACCWQhBBLIQgjUg6i/fYebV6/T0d7+0BiLxUJVxQ0MlbceGGu+10RV
+      xY2ujzOb+e66nvY265uM3RZox44djB8/Xio8MpvNTJw4kfj4eCmmqqqK0aNHU1xc3K3PKC4u
+      JjMzs7sp/mJoarzHm/MXkzY3hY9+v575E2O7jLtyuYikSdP53xWr+cMr/8U7C/9DGtub9TEp
+      0TNI/907LHgmzkqwa0UlzJsQQ+bKNcybEMPpQ0elsW4/CwsLC6O5uZmrV68SGBjI9evXsVgs
+      VFZWUl9fj5ubG0VFRSiVSgYNGtStzygvL+ezzz7jpZde6m6avwg2rVpL6OiRvPDSbwBo+6F0
+      5se0trSwZslrrPxjOgOCAqU+gMryCg5s28mHOftQuzhzdPdnfPjf7/LWpg0AvLcsjWXr1xAW
+      MQrjrWr+Mz6BkePHonZx7v4KFBgYiEqloqioCICCggKGDx/OgAEDpL7i4mKCgoJQqTor/bOz
+      s4mNjSU6OprMzEzu30G4cOECSUlJxMbGMn/+fHJzczl06BBZWVk0NDSQlJREUlISdXV13U23
+      x9LS1EzeqTPMXjhf6lN1UVt1+tBRRk18SpIHwN6h8w2LUwdymDZnNmoXZwCemfmvFOVdpKO9
+      nUr9DWxsbAmLGAVAb18fxkyeyDdfdhbud3sFsrOzIzg4mOLiYuLj4yksLCQ0NJRevXpRWFjI
+      2LFjKSoqIiwsDIDjx4+TlZVFcnIySqWSTZs2MWTIEKZMmUJaWhohISEkJCRw/fp1ysvLGT16
+      NKGhodTU1DB16tTOL0bV9Ssnv2QMlVX4+Gk5uns/xX+9hFKpJPr5eIL/xbpO/VbFTVzc3fl0
+      4yb035bh669l1oJ5uHq4U1P9PaOfHi/F2tja4uOv5bahhppb1fgPCrCay2/gAIy3vu+MlZN8
+      eHi41QoUFhZGaGgohYWFmM1mSktLJYFycnKIjIwkOTmZxMREIiMjOXnyJBaLhbt37+Ln50dU
+      VBQLFy4kMTGRkJAQIiMjcXR0RKfTodPpUKvVctLtkdw21lBWUMSNq9eImDyRfoGDWZG4qMu4
+      UwdysFOpmPTcdBrq6nl11q/p6OjgXsNd1M5OVvGOajVNjY3cu9uIg5O6yzGQWQ8UHh7OJ598
+      Qk1NDXq9nqFDh+Lh4UFGRgZ6vZ6mpiZJoOrqagwGA/PmzQM6i/H9/f1RKBSkpqaSnp7Ojh07
+      GDNmDK+88goBAQH/zycL7uOm8WD42AhS3nxD6rPt4uVCN40HCakpPDOzs/YqauokXvu3uVzJ
+      L8TdU8Pdunqr+Lt19bhqPLh3t/HBsfoG3DQewM8gkNlsZu/evfj7++Pq6oparaa5uZkjR47Q
+      u3dvfHx8AHB3d8fZ2Znk5GTpeBcXFwDmzJlDXFwceXl5ZGVlsWrVKjZv3oxCoRAlrj+Bd98+
+      lBWWYDaZsPmh7sq3n98DcT5+WkovXpYEuh/X1NiIl7YPZQVFjJvWeanQ1tqKoaoKd40HZpOJ
+      a0UlVnNdLSzi6bjpgMxTmKenJ3369GHv3r3SSqNUKgkKCmL//v1SH8DIkSMpLi7GaDQSHByM
+      o6MjJSUltLS0kJ6eTmNjI2PHjiU8PFwqcR08eDANDQ0cO3YMo9EoZOoCtYszQcPDOPjpbqnv
+      6yMngM7td11N55vD46Y9w9mjJ6T7PC1NzRSczyMgeAgTpj/L8X2f03Cnc5Ny6NPdjJowDhtb
+      W3r5eOOq8eD8ia8AqNTfoOD8BUZNfAr4GWqiw8LCOHLkiJUsISEhXL582apPp9NRWlrKypUr
+      sVgsqNVqFixYgEKh4NKlS2zZsgUAR0dHqQh/8ODBTJo0ibS0NMxmM4cPH6Z3795yU+5xLF65
+      nJW/eZncAzm0tbXh7OoKwPvL32Z6wvPEzJmFs6srL7+Txm9fmMfAkCAqyq4xM3kuGq/O73P2
+      wvksnjYTX38/6mpq+f0nWdL8S9es5K3kl9mbtYUbZddYsnqFtNN77E/jW1paaGxsRKPRWJWy
+      NjQ0cOfOHby9vXFwsH6Bv76+HpPJhEajeZyp/iw8zqfxVRU3UCrt8Or78NfLO9rbuXmtHK++
+      vjj9cAlxn6a7jdQajGgD+ks17Pcxm0x8d12Pt19fafsPopzjkdPTyzn+D14Vy4a6T2pyAAAA
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAARBElEQVR4nO3dW0xcd34H8O85Z64wDDDDZTAYEHHAW7x1jGvHJGmcjXbTeJNUqtxuq12t
+      FGmrvlSrqlWf+tjHVKrUrrRS96HKdqNWUaoqXm2S3TSbitS1g20MGIONuTNmBjweYJj7uf37
+      4MzExubimfM/4/H/95HyEDC/+cM53/mf/7n8RmKMMRAiIEmSJLnSgyCkkiwPAO8JxTRNrvUZ
+      Y1x/B6pf2frAg/uQ5QEwDMPqkrbX57kBTNPkXp/nmwRjjPubkJ37EB0CEaGVFICFhQWMjY0h
+      mUxidHQU0WjU6nERYgtHKT8UCAQQDoexvLyMrq4uLC8vIxQKFY/feE5hpmlyrw/wW8uYpglJ
+      krjW58mONYAd27hQ/7EDwBiDw+FAMBhENpt95B9ckqTyR7kDSZJsqc/zNQqvw7Mur/qFnf9p
+      2MZAiTNAJBKBqqro6+vD3Nwc2traikVN04Qs81taSJLEtX7hHZrXazDGuNcHwPVvxBjjOn6e
+      9YEH9yHJ6gthuq7D4SgpV/uiaRqcTie3+rquQ5ZlbhvAMAyuAShM7YqicKlfOIvFq37hENqO
+      fYguhJGqZpoMU4sxXL65gryml1SDAkCq1q8vzWJsdhV3NjL4t99cg1HCCQAKAKlakwt3cPb0
+      N/DG4LPQdAOJVP6xa/A70CKEs1CwDpduRBD0e6FqBnw1rseuQTMAqVp/+q1+pDJ5XF+4g7fP
+      PAeX4/EX5jQDkKrlcio4c+rZsmrQDECERgEgQqMAEKFRAIjQKABEaBQAIjQKABEaBYAIjQJA
+      hEYBIEKjABChUQCI0CgARGgUACI0CgARGgWACI0CQIRWUgBisRimp6ehqiqmp6dx584dq8dF
+      iC1KCoDT6QRjDEtLS0in0wgEAlaPixBblPRM8NbWFgzDQE9PD8LhMEZGRnDixIlib3pN06we
+      ZxHv3vGF34FXb8pCbd69O3k1yS20LuRdn2cD3vv3oZICsLKygrq6OsTjcSSTSdTX1xfbCfJu
+      jQiAWiPuUR+g1oh7KexDZfcG3d4tmHqD7o4CsDu7e4OW/Sq824gTwhOdBiVCowAQoVEAiNAo
+      AERoFAAiNAoAERoFgAiNAkCERgEgQqMAEKFRAIjQKABEaBQAIjQKABEaBYAIjQJAhEYBIEKj
+      ABChUQCI0CgARGgUACI0CgARWkkB0HUd2WwWjDFks1luXcII4a2kvkC3b9/G2toa6uvrkUql
+      4HQ6cfToUavHRgh3JQWgsbER0WgUsizj8OHDmJ+fL/bUpN6ge9en3qB713+ie4MODw+jvb0d
+      Pp8PExMTqKmpod6g+0StEXdXFb1BC+mXJOn+PosAqDfoXigAu6uK3qD3bzyXy2XZwAixG50G
+      JUKjABChUQCI0CgARGgUACI0CgARGgWACI0CQIRGASBCowAQoVEAiNAoAERoFAAiNAoAEdqu
+      AVheXgYALC4u2jEWQmy34/MA8Xgc7733Hg4fPoz29nZ0d3fbOCxC7LFjAILBIAYHBzE4OAiP
+      x2PnmAixza6HQB6PB+fOncPNmzftGg8httoxAJFIBJlMBk6nE+l02s4xEWKbHQOg6zpSqRSa
+      m5uRTCbtHBMhttlxDdDZ2YlUKoWmpibEYjE7x0SIbXacAeLxOD7++GOcP38euq7bOSZCbLNj
+      AILBII4fP47a2lokEokHvrexsYHl5WWoqorR0VFEo1HuAyWEh137Avn9fui6Dp/P98DXJUlC
+      IpFAXV0dVFVFQ0PDAy3teDbLtaO+Ha3/eLGjNSLP1pF270O7BiCRSCCZTCIYDD7wdb/fD0mS
+      4PP50NPTg7GxMZw6dcqWvo7VXr+w8/B6jUJdXvULneF4jt/ObbxrAFwuFxYWFtDe3v7A18Ph
+      MFKpFOLxOFZXV3HgwAFIkgRFUbi2zQPubQCe9RljXFsjAuDaGrGA19+oEF6erREBfuMHHtyH
+      dgzA0tISOjs7EYlE4Ha7H/heV1cXurq6AAChUIjbQAnhbce3ocXFRWiahhdffJFuhhMAYwyL
+      q5u4FY7D2OH4mzEgk9dwbW4NiVQOHI9SSsYYQ+RuElOLMejG3uuIHbtDJ5NJfPrppzAMA6dP
+      n0Zra+u+BkDdoXf3pHaH/mR4BpG7KXjdDpiM4fvf/ibkbQvdzVQO//LLKzjc2YTpcBw/fO13
+      0Rass2zsQPndob+cuo2R6QhaG32IbabxF394HMq2v/W+ukPX1dXh7NmzJQ2CVJ/x2TX87Z+9
+      AIci45/+cxjprIq6mgcPfUdvRfHikYMY7O/A4a5m/O+1ZXzvW/0VGvGjfTl5G3/+xgB8NS68
+      +8kYovEUOpr9O/57eiCGAAAafB7cWIphIboBwzDhcT383tgZasDE/B3cTWRw5eYKnjnQWIGR
+      7q4tWIex2VWsxLYQS2QQqPPu+u9L+oCM3dAh0O6e1EOgTE7DLy9MI6/qePOFPgT9D+84jDGM
+      z67i4uRtHD0UwmB/h+XXA8o9BFI1A58Mz+JuIo3XTx5C+yPe/e8/BKIAbCNqAPaLPiGGkH1Q
+      NQP/8dvrWFtP4UhPC14/eQiyzOfqcTloDUC4+GxkHofaG/FXf/I81reymLkdr/SQHokCQLhI
+      ZVQE/TVwOx3w17qRyfP76Nxy0CEQ4eI7J57Bu5+M4n9GF+B0KHj95KFKD+mRaBG8DS2Cd/c4
+      i2BVM7CVyaOxzvPQxaid0CKYPDVcTgVN9TWVHsauaA1AhEYBIEKjABChUQCI0CgARGh0FohU
+      DaamoV79BWDk4Tz2Q8g1gbJr0gxAqkb+i3+A0nEcjkPfRn7oHTCj/KvLNAOQqsEyG1AODECS
+      v7oIp+cApbyLohQAUjWUjt+DeuEngMMNub4DcNWWXZMCQKqG89gPYN65ARgq5NA3IUnlH8FT
+      AEjVkCQZSqu1zyCXFABVVZHJZOD3+xGJRBAIBFBT82Tf8/E00w0T587fxHxkE8+0N+DNwV5w
+      7Cv1EKamkf/yp2DJNTh6XoHj8BvcWidaraQ5JBaLYWFhAWtra8jn87h165bV4yKP4dKNFXhc
+      Tvz47ElIkoRrc3dsfX117N/hOHgKnu/8PYyVEbBE2NbXL0dJM0BbWxs2NjaQzWbR0tKCVCoF
+      0zSL/2kav4cfCrf78lL4HXi9gxVqW1l/M5lFo88NRWJoqHVjM5Xltg0e1bzWzKwDNS1gkhOm
+      uwF6ZhNSbVtZ9Xn2Br1/HyrpeYDFxUXMzc3hyJEjmJ+fRyAQQF9fHwB6HmAvPJ4HSGbyePeT
+      MbicDqiajrfPPPdQTx+rPOp5AHMzjPyFf4bkqQcUN9y//zdfn6p8THY/D1D2AzHb39EoALvj
+      9UCMphvYSOZQX+uCQ5FtfyCGqRmw3CakulBZZ2eq7oEY3l2Oyf44HQpaGmu5HyLuRHLVQHJV
+      34kQ2nuJ0CgARGgUACI0CgARGgWACI0CQIRGASBCowAQoVEAiNAoAERoFAAiNAoAERoFgAiN
+      AkCERgEgQqMAEKFRWxSyL3lNx8TcHdR4HHi2IwAbm05wRTMA2ZNhmPj5r8extpHCyK0oPr+6
+      WOkhWYYCQPa0nsyCMYY3Bnvxx6d/B+Ozq5UekmXoEIjsyV/rRjqnYXr5LtY20mhv9ld6SJah
+      GYDsye104O0zz2F0ZhXJTB5nX/5GpYdkGfqc4G2qtS3K/fWBJ+NzgktRVW1RdF3HzMwMAoEA
+      WltbrRofqVLG6nXkL/0MAOA+8SMobUcrPKK9lfU2lEwmkcvl0NTUZNV4SJVipoH8pZ/Be+Yd
+      eL/7DtQr/wpm6JUe1p7KmgF8Ph/q6+tx+fJlnDx5knqD7rO+1b1B71c4or2/d6fV9bf3Br33
+      DRPMNKF/9WXTZNB1DTAf7wjb7t6gZQUgnU5ja2sLDQ0NxeNm3msAALQG2KM+YP8agDEG6dgP
+      oP333wGQ4D76PSguz2MH3Y41APD1PlT2Irjw49QbdH+e1gAAX+0Levbe/zi8Jc1yVbUIBlA1
+      H4RAvsYYA0vHAABSbbNl21CSJMBZXf1B6UKYYBhj0G/+Cnr4MgAGR+cpOPq+K+wbGQVANKYO
+      ffa38Lz5jwADcr/6azh6/wAo/2CgKon5W4tMkgFZuXcIxAAoDgBivvsDFADhSLIC1+BfIn/h
+      JwAA1ws/LvnTXJ4GdCvENnQWaHd0KwR5qhlrk9Cu/xck/wG4nvs+JKe30kPiiu4GJUUsuwl1
+      5OdwnfgR5PoOqKO/qPSQuKMZgBSZ6Rhk/wFIdW1QFDeMpf+r9JC4owCQIjnQA5bfgnrxpzAT
+      YTj7/6jSQ+KOFsHbiL4IZqYBM3YTUm0zZF/LQ9+nRTB5qkmyAqW1v9LDsA0tgonQKABEaBQA
+      IjQKABEaBYAIjQJAhEYBIEKjABChlRUAxhg2NjagqqpV4yHEVmUFIBaL4fbt25iamrJqPITY
+      quzOcN3d3cI+UE2qX1kBCAaDmJiY4HZjFCG8lX03qGEYkGWZGmPt05N+N+henra7QS27HbrQ
+      U9M0TW4bt/A6vOvb0buzmuszxqp+G8uyDKfTaV0ACnjPALzrb5/ReNTnOQMUmtbyrM97BjBN
+      k+thdWEf4vI8AM/kUv298T4hwXN2LLBzG1g+AxBSLSRJkiyPGmMM169fx9TUlOU93ldWVnDl
+      yhVsbGxYWvd+0WgUCwsLXGobhoFr164hHA5zqZ/L5TA2Nobp6WkutS9dugTTNDE9PY3x8XFL
+      t6+qqhgeHoZhGJidncXly5ctvcCqaRouXrwIwzBgmiYuXrwIgNOtELquwzAMyz/MIhQKwev1
+      crvyrGkaVldXkUqluNRfXV3F1tYWtw+v0HUdm5ubWF9ft7y2y+WCx+OBpmnQNA319fVIJBKW
+      1Xc4HPB6vWCMoaurq7ijWkVRFPh8PpimiVu3bhXDyyUAhYWM1ceKCwsL8Pv9aGl5+GFtK0Sj
+      0WIIeOykiqKgo6MDsVjM8trAvQ8s6ezs5HKSQJZlKIoCSZJgGAZUVbX0dWRZLtabnJxEX18f
+      PB6P5fUZY7h7925xG3A5neL3+7mc6ZAkCZubm/D7/aivr7e0NgB0dnbi4MGDiMfjXBZiLS0t
+      mJ6e5hbgQCCAWCyG5uZmy2snk0nk83msra2hsbER2WwWtbW1ltVPp9PI5XJYWVmB0+nEysoK
+      ampq4Ha7LamfzWaL9V966aViAGgRTITFZRFMSDWhABChUQCI0CgAnH3xxRdIpVIYHR3F0tIS
+      ZmZmit+LxWLI5/M7/uzy8jK2traK/7++vo5z58498jpFKpXCRx99hBs3bmBychKfffYZMpkM
+      hoaGYJomhoaGMDw8bO0v9xSg1oicXb16FYqi4MKFCxgcHIQsy5iamkI+n0csFkN7ezuSySR0
+      XcfAwADGx8cRDAYRi8Vw9OhRZDIZfPDBB3jttdcwNDSEM2fO4MMPP0RLSwvC4TBcLhdeeeUV
+      tLa2ore3F+fPnwcAdHR0YGJiAiMjIxgYGMDc3BwMw8CxY8fgcrkq/Fd5ctAMwFkoFMKNGzfQ
+      1NQE0zQRjUYxPj6ObDaLzs5OPP/883A6nWhtbcXMzAwGBgYwOTkJxhgWFxehaRoYY8jlcmCM
+      oba2FoqiIJPJoLu7GydOnEAkEoFpmvj888/x1ltvQVEUeDweBAIBNDc3w+v1IhQKYX5+vtJ/
+      jicOzQCc9fT0IJlMoqOjA5Ikoa6urnj+/NChQxgfH8fy8jJ6e3vR39+PUCiEwcFBrK+vo6ur
+      C263Gw0NDZBlGS+//DLef/995PN59Pf3w+12o7GxEV6vF/F4HF6vFzMzM+ju7kYkEkEoFEIu
+      lyvetvDqq6/Su/82dB2gwhhjmJmZQW9v775/JpFIFC82ktJJkiT9P4CtWrDYiVdVAAAAAElF
+      TkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
