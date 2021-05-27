@@ -9,4 +9,4 @@ The goal is to prepare the data first, then provide meaningful predictions and v
 
 - data: data files that are below the 25MB threshold
 - utils: some functions to convert the .ipynb workbook into regular Python files later
-- notebooks:
+- visualisations: the Tableau workbook file(s)
